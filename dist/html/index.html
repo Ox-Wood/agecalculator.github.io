@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="shortcut icon" href="../img/semi-logo-title-bar-blk.png" type="image/x-icon">
+</head>
+<body class="bg-slate-100">
+    <section class="h-screen w-screen flex items-center justify-center">
+        <main class="bg-white w-[80%] h-[70%] rounded-t-[30px] rounded-bl-[30px] rounded-br-[230px] shadow-xl flex flex-col items-center lg:w-[50%] lg:h-[80%] lg">
+            <!--first container-->
+            <div class="h-48 w-[85%] flex flex-row">
+                <div class="w-[190px] lg:w-[140px] flex flex-col justify-center font-black uppercase font-Montserrat">
+                    <span id="monthError" class="mb-2 mt-11 text-[12px] lg:text-2xl" >Month</span>
+                    <input type="text" name="month" id="month" placeholder="MM" required class="error w-full px-5 py-5 font-Montserrat text-[12px] uppercase border-gray-200 border-2 outline-none font-black rounded-[10px] lg:text-2xl ">
+                    <p class="text-[8px] lg:text-[13px] flex items-end font-Montserrat font-normal text-red-600 h-5 lg:h-7 capitalize italic month-warnings"></p>
+                </div>
+                <div class="w-[190px] lg:pl-10 pl-2 flex flex-col justify-center font-black uppercase font-Montserrat">
+                    <span id="dayError" class="mb-2 mt-11 text-[12px] lg:text-2xl" >Day</span>
+                    <input type="text" name="day" id="day" placeholder="DD" required class="error w-full px-5 py-5 font-Montserrat text-[12px] uppercase font-black border-gray-200 border-2 outline-none rounded-[10px] lg:text-2xl ">
+                    <p class="text-[8px] lg:text-[13px] flex items-end font-Montserrat font-normal text-red-600 h-5 lg:h-7 capitalize italic day-warnings"></p>
+                </div>
+                <div class="w-[190px] lg:pl-10 pl-2 flex flex-col justify-center font-black uppercase font-Montserrat">
+                    <span id="yearError" class="mb-2 mt-11 text-[12px] lg:text-2xl" >Year</span>
+                    <input type="text" name="year" id="year" placeholder="YYYY" required class="error w-full px-5 py-5 font-Montserrat text-[12px] uppercase font-black border-gray-200 border-2 outline-none rounded-[10px] lg:text-2xl ">
+                    <p class="text-[8px] lg:text-[13px] flex items-end font-Montserrat font-normal text-red-600 h-5 lg:h-7 capitalize italic year-warnings"></p>
+                </div>
+            </div>
+            <!--container line and button-->
+            <div class="w-[85%] h-[90px] flex flex-row relative justify-center items-center">
+                <div class="border-[1px] border-gray-200 w-full h-[0px] absolute" ></div>
+                <div class="w-[80px] h-[80px] lg:w-[140px] lg:h-[140px] lg:right-0 flex absolute">
+                    <button id="button" class="h-full w-full rounded-full bg-violet-600 hover:bg-black font-Montserrat text-white text-[14px] lg:text-[20px] font-black uppercase" type="button">submit</button>
+                </div>
+            </div>
+            <!--listed items-->
+            <div class="h-[45%] w-[85%]">
+                <ul class="w-full flex flex-col items-center content-center pt-5">
+                    <li class="w-[95%] flex flex-row items-center italic font-Montserrat text-8xl text-black font-black">
+                        <span id="yrRslt" class="font-Montserrat text-[50px] lg:text-7xl italic text-violet-600 font-black" >- -</span>
+                        <h1 class="ml-4 text-[50px] lg:text-7xl ">years</h1>
+                    </li>
+                    <li class="w-[95%] flex flex-row items-center italic font-Montserrat text-8xl text-black font-black">
+                        <span id="mnthRslt" class="font-Montserrat text-[50px] lg:text-7xl italic text-violet-600 font-black" >- -</span>
+                        <h1 class="ml-4 text-[50px] lg:text-7xl ">months</h1>
+                    </li>
+                    <li class="w-[95%] flex flex-row items-center italic font-Montserrat text-8xl text-black font-black">
+                        <span id="dayRslt" class=" font-Montserrat text-[50px] lg:text-7xl italic text-violet-600 font-black" >- -</span>
+                        <h1 class="ml-4 text-[50px] lg:text-7xl ">days</h1>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </section>
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            },
+            fontFamily: {
+              'Playfair': ['Playfair Display'],
+              'Montserrat': ['Montserrat'],
+            }
+          }
+        }
+      </script>
+    <script src="../scripts/js/index.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+</body>
+</html>
